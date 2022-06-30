@@ -2,12 +2,15 @@ from binary_search import BinarySearch
 import unittest
 import json
 import time
+from pathlib import Path
 
 bs = BinarySearch()
 
 # Unloading all lists from a file
-with open("items.json", "r") as file:
-  data = json.load(file)
+script_location = Path(__file__).absolute().parent
+file_location = script_location / 'items.json'
+file = file_location.open()
+data = json.load(file)
 
 # Setting values to created variables
 simple_list = data["simple_list"]

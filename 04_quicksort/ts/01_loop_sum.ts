@@ -1,4 +1,4 @@
-function sum(arr: number[]): number {
+function sum2(arr: number[]): number {
     let total = 0;
     arr.forEach(number => {
         total += number;
@@ -7,4 +7,4 @@ function sum(arr: number[]): number {
     return total;
 }
 
-console.log(sum([1, 2, 3, 4]));
+console.log(sum2([1, 2, 3, 4]));
